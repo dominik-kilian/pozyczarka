@@ -71,6 +71,8 @@ GEM
       msgpack (~> 1.2)
     brakeman (5.4.0)
     builder (3.2.4)
+    code_analyzer (0.5.5)
+      sexp_processor
     concurrent-ruby (1.1.10)
     crass (1.0.6)
     cssbundling-rails (1.1.2)
@@ -80,6 +82,7 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     erubi (1.12.0)
+    erubis (2.7.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -92,6 +95,7 @@ GEM
       activesupport (>= 5.0.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
+    json (2.6.3)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -143,6 +147,14 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.4)
       loofah (~> 2.19, >= 2.19.1)
+    rails_best_practices (1.23.2)
+      activesupport
+      code_analyzer (~> 0.5.5)
+      erubis
+      i18n
+      json
+      require_all (~> 3.0)
+      ruby-progressbar
     railties (7.0.4)
       actionpack (= 7.0.4)
       activesupport (= 7.0.4)
@@ -154,6 +166,9 @@ GEM
     redis (4.8.0)
     reline (0.3.2)
       io-console (~> 0.5)
+    require_all (3.0.0)
+    ruby-progressbar (1.11.0)
+    sexp_processor (4.16.1)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -194,6 +209,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4)
+  rails_best_practices (~> 1.23, >= 1.23.2)
   redis (~> 4.0)
   sprockets-rails
   stimulus-rails

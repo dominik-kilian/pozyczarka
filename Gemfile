@@ -30,5 +30,6 @@ end
 
 group :development do
   gem 'annotate', '~> 3.2'
+  gem 'faker'
   gem 'web-console'
 end

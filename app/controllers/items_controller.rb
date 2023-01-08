@@ -2,8 +2,7 @@
 
 class ItemsController < ApplicationController
   before_action :set_item, only: %i[show edit update destroy]
-  layout 'application'
-  layout 'inny_layout', only: %i[ show ]
+
   # GET /items or /items.json
   def index
     @items = Item.all

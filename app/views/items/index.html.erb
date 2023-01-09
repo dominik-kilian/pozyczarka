@@ -17,8 +17,8 @@
       <% @items.each do |item| %>
         <tr>
           <td><%= item.name %></td>
-          <td><%= item.active %></td>
-          <td><%= item.borrowed %></td>
+          <td ><%= item.active %></td>
+          <td class="btn btn-danger"> <%= item.borrowed %></td>
           <td><%= link_to "Show this item", item %></td>
         </tr>
       <% end %>

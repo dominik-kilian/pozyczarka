@@ -1,8 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
 <h4>Items</h4>
-<%= link_to "Add new item", new_item_path, class: 'btn btn-primary' %>
-
 <div id="items" class="container-fluid">
     <table class="table">
       <thead>
@@ -11,6 +9,7 @@
           <th class="text-center">Active</th>
           <th class="text-center">Borrowed</th>
           <th>Actions</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +24,7 @@
       <% end %>
       </tbody>
     </table>
+  <%= link_to "Add new item", new_item_path, class: 'btn btn-primary' %>
 </div>
 
 

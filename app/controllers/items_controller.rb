@@ -19,6 +19,21 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit; end
 
+  def active
+    @Items = Item.where(active: true )
+  end
+
+  def not_active
+    @Items = Item.where(active: false )
+  end
+
+  def borrowed
+    @Items = Item.where(borrowed: true )
+  end
+
+  def not_borrowed
+    @Items = Item.where(borrowed: false)
+  end
   # POST /items or /items.json
   def create
     @item = Item.new(item_params)

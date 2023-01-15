@@ -2,6 +2,7 @@
 
 <h4>Books</h4>
 <div id="items" class="container-fluid">
+  <%= link_to "Add new book", new_item_path, class: 'btn btn-primary' %>
     <table class="table">
       <thead>
         <tr>
@@ -27,7 +28,7 @@
       <% end %>
       </tbody>
     </table>
-  <%= link_to "Add new item", new_item_path, class: 'btn btn-primary' %>
+
 </div>
 
 

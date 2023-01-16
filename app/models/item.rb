@@ -16,4 +16,9 @@ class Item < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3}
 
   enum item_type: %i[fantasy sci-fi criminal horror other ]
+
+  scope :active, -> {where(active: true)}
+  scope :not_active, -> {where(active: false )}
+  scope :borrowed, -> {where(borrowed: true)}
+  scope :not_borrowed, -> {where(borrowed: false)}
 end

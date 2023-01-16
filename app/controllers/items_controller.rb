@@ -21,19 +21,19 @@ class ItemsController < ApplicationController
   def edit; end
 
   def active
-    @items = Item.where(active: true )
+    @items = Item.active
   end
 
   def not_active
-    @items = Item.where(active: false )
+    @items = Item.not_active
   end
 
   def borrowed
-    @items = Item.where(borrowed: true )
+    @items = Item.borrowed
   end
 
   def not_borrowed
-    @items = Item.where(borrowed: false)
+    @items = Item.not_borrowed
   end
   # POST /items or /items.json
   def create

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class ItemsController < ApplicationController
+  attr_accessor :Items
   before_action :set_item, only: %i[show edit update destroy]
 
   # GET /items or /items.json
@@ -20,19 +21,19 @@ class ItemsController < ApplicationController
   def edit; end
 
   def active
-    @Items = Item.where(active: true )
+    @items = Item.where(active: true )
   end
 
   def not_active
-    @Items = Item.where(active: false )
+    @items = Item.where(active: false )
   end
 
   def borrowed
-    @Items = Item.where(borrowed: true )
+    @items = Item.where(borrowed: true )
   end
 
   def not_borrowed
-    @Items = Item.where(borrowed: false)
+    @items = Item.where(borrowed: false)
   end
   # POST /items or /items.json
   def create

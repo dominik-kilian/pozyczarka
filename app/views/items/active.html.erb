@@ -1,8 +1,6 @@
-p style="color: green"><%= notice %></p>
 
-<h4>Books</h4>
+<h4>Active books</h4>
 <div id="items" class="container-fluid">
-  <%= link_to "Add new book", new_item_path, class: 'btn btn-primary' %>
   <table class="table">
     <thead>
     <tr>
@@ -23,7 +21,7 @@ p style="color: green"><%= notice %></p>
         <td class="text-center"><%= item.borrowed ? "YES" : 'NO'%></td>
         <td class="text-center"><%= item.item_type %></td>
         <td><%= link_to "Show this item", item, class: 'btn btn-primary'%></td>
-        <td><%= button_to "X", item_path(item), method: :delete, data: {turbo_confirm: ' Are you sure?'}, class: 'btn btn-danger'%></td>
+        <td><%= button_to "X", item_path(item), method: :delete, class: 'btn btn-danger'%></td>
       </tr>
     <% end %>
     </tbody>

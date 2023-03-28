@@ -26,18 +26,18 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec'
+  gem 'faker'
+  gem 'factory_bot_rails'
 end
 
 group :development do
   gem 'annotate', '~> 3.2'
-  gem 'faker'
   gem 'web-console'
   gem 'hotwire-livereload'
 end
 
 group :test do
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
-  gem 'factory_bot_rails'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'database_cleaner-active_record'
 end

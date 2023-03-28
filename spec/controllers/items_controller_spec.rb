@@ -58,4 +58,31 @@ describe ItemsController, type: :controller do
     end
   end
 
+  describe 'GET #active' do
+    it 'returns http success' do
+      get :active
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
+  describe 'GET #not_active' do
+    it 'returns http success' do
+      get :not_active
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
+  describe 'GET #borrowed' do
+    it 'returns http success' do
+      get :borrowed
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
+  describe 'GET #not_borrowed' do
+    it 'returns http success' do
+      get :not_borrowed
+      expect(response).to have_http_status(:ok)
+    end
+  end
 end

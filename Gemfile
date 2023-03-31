@@ -40,4 +40,6 @@ group :test do
   gem 'rspec-rails', '~> 6.0', '>= 6.0.1'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'database_cleaner-active_record'
+  gem 'rails-controller-testing'
+  gem 'capybara'
 end

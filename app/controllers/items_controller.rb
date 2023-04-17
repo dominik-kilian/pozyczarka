@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class ItemsController < ApplicationController
-  attr_accessor :Items
   before_action :set_item, only: %i[show edit update destroy]
+  before_action :authenticate_user!
 
   # GET /items or /items.json
   def index

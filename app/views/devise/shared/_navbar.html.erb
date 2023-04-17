@@ -1,0 +1,14 @@
+<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav">
+    <%= link_to 'All', root_path, class: nav_link_class(root_path)%>
+    <%= link_to 'Active', active_items_path, class: nav_link_class(active_items_path)%>
+    <%= link_to 'Not Active', not_active_items_path, class: nav_link_class(not_active_items_path)%>
+    <%= link_to 'Borrowed', borrowed_items_path,class: nav_link_class(borrowed_items_path)%>
+    <%= link_to 'Not Borrowed', not_borrowed_items_path, class: nav_link_class(not_borrowed_items_path)%>
+  </div>
+</div>
+
+<%= link_to 'Log out',destroy_user_session_path, class: 'btn btn-default'%>
+ <p class=" text-primary mt-3">
+    <%= current_user.email %>
+ </p>

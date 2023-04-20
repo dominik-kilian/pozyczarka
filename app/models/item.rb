@@ -26,4 +26,6 @@ class Item < ApplicationRecord
   scope :not_active, -> {where(active: false )}
   scope :borrowed, -> {where(borrowed: true)}
   scope :not_borrowed, -> {where(borrowed: false)}
+
+  belongs_to :user
 end
